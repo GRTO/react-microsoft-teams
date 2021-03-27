@@ -1,3 +1,14 @@
-const App: React.FC = () => <h1>This is the first commit</h1>;
+import React from "react";
+import { ChatEngine } from "react-chat-engine";
+import "./App.css";
+
+const App: React.FC = () => (
+  <ChatEngine
+    height="100vh"
+    projectID={process.env.REACT_APP_PROJECT_ID}
+    userName={process.env.REACT_APP_USER_NAME}
+    userSecret={process.env.REACT_APP_USER_SECRET}
+  />
+);
 
 export default App;
